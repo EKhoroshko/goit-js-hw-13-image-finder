@@ -1,0 +1,130 @@
+body {
+  max-width: 1400px;
+  padding: 0px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(2, 3, 20);
+}
+
+.search-form {
+  padding-top: 25px;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  width: 100%;
+  border-color: rgb(19, 213, 219);
+}
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &-item {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .photo-card {
+    background-color: rgb(97, 228, 162);
+    padding: 0 10px;
+  }
+
+  .photo {
+    margin-top: 10px;
+    width: 250px;
+    height: 200px;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+  }
+  .stats-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .material-icons {
+    height: 50px;
+  }
+}
+
+.btn {
+  display: block;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(24, 18, 15);
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: -1px -1px #000;
+  user-select: none;
+  padding: 0.8em 2em;
+  outline: none;
+  background-color: rgb(20, 228, 54);
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    ),
+    radial-gradient(
+      190% 100% at 50% 0%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(0, 0, 0, 0) 50%
+    );
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto;
+  background-position: 200% 0, 0 0;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+}
+
+.btn:active {
+  top: 1px;
+  box-shadow: none;
+}
+
+.btn:hover {
+  transition: 0.5s linear;
+  background-position: -200% 0, 0 0;
+}
+
+.topbutton {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid #e17992;
+    background: #c2e297;
+    z-index: 99999;
+    outline: 0;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.topbutton:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 4px solid #e17992;
+    border-left: 4px solid #e17992;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
