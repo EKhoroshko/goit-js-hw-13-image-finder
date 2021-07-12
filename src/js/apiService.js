@@ -1,3 +1,5 @@
+import { alert } from '@pnotify/core';
+
 export default class apiService {
     constructor() {
         this.value = '';
@@ -13,8 +15,18 @@ export default class apiService {
             .then(response => {
                 if (response.ok) { return response.json(); }
             }).then(({ hits }) => {
-                this.addPage();
-                return hits;
+                if (hits.length === 0) {
+                    alert({
+                        text: 'Something went wrong ...please try again',
+                        width: '400px',
+                        animateSpeed: 'fast',
+                        delay: 2000,
+                    });
+                } else {
+                    this.addPage();
+                    return hits;
+                }
+              
             });
     }
 
